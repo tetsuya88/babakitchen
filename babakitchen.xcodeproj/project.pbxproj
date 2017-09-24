@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		789BCB6F1F77FDBF00FAC00C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BCB6E1F77FDBF00FAC00C /* AppDelegate.swift */; };
-		789BCB711F77FDBF00FAC00C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BCB701F77FDBF00FAC00C /* ViewController.swift */; };
+		789BCB711F77FDBF00FAC00C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BCB701F77FDBF00FAC00C /* MainViewController.swift */; };
 		789BCB741F77FDBF00FAC00C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789BCB721F77FDBF00FAC00C /* Main.storyboard */; };
 		789BCB761F77FDBF00FAC00C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 789BCB751F77FDBF00FAC00C /* Assets.xcassets */; };
 		789BCB791F77FDBF00FAC00C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789BCB771F77FDBF00FAC00C /* LaunchScreen.storyboard */; };
+		789BCB811F78053F00FAC00C /* recipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BCB801F78053F00FAC00C /* recipeViewController.swift */; };
+		789BCB831F78055A00FAC00C /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BCB821F78055A00FAC00C /* infoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		789BCB6B1F77FDBF00FAC00C /* babakitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = babakitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		789BCB6E1F77FDBF00FAC00C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		789BCB701F77FDBF00FAC00C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		789BCB701F77FDBF00FAC00C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		789BCB731F77FDBF00FAC00C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		789BCB751F77FDBF00FAC00C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		789BCB781F77FDBF00FAC00C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		789BCB7A1F77FDBF00FAC00C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		789BCB801F78053F00FAC00C /* recipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipeViewController.swift; sourceTree = "<group>"; };
+		789BCB821F78055A00FAC00C /* infoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				789BCB6E1F77FDBF00FAC00C /* AppDelegate.swift */,
-				789BCB701F77FDBF00FAC00C /* ViewController.swift */,
+				789BCB701F77FDBF00FAC00C /* MainViewController.swift */,
 				789BCB721F77FDBF00FAC00C /* Main.storyboard */,
 				789BCB751F77FDBF00FAC00C /* Assets.xcassets */,
 				789BCB771F77FDBF00FAC00C /* LaunchScreen.storyboard */,
 				789BCB7A1F77FDBF00FAC00C /* Info.plist */,
+				789BCB801F78053F00FAC00C /* recipeViewController.swift */,
+				789BCB821F78055A00FAC00C /* infoViewController.swift */,
 			);
 			path = babakitchen;
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				789BCB711F77FDBF00FAC00C /* ViewController.swift in Sources */,
+				789BCB811F78053F00FAC00C /* recipeViewController.swift in Sources */,
+				789BCB711F77FDBF00FAC00C /* MainViewController.swift in Sources */,
+				789BCB831F78055A00FAC00C /* infoViewController.swift in Sources */,
 				789BCB6F1F77FDBF00FAC00C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
