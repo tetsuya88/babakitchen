@@ -14,6 +14,8 @@
 		789BCB791F77FDBF00FAC00C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789BCB771F77FDBF00FAC00C /* LaunchScreen.storyboard */; };
 		789BCB811F78053F00FAC00C /* recipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BCB801F78053F00FAC00C /* recipeViewController.swift */; };
 		789BCB831F78055A00FAC00C /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BCB821F78055A00FAC00C /* infoViewController.swift */; };
+		789BCB851F780ED500FAC00C /* JSONPurser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BCB841F780ED500FAC00C /* JSONPurser.swift */; };
+		789BCB871F78105A00FAC00C /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 789BCB861F78105A00FAC00C /* sample.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		789BCB7A1F77FDBF00FAC00C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		789BCB801F78053F00FAC00C /* recipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipeViewController.swift; sourceTree = "<group>"; };
 		789BCB821F78055A00FAC00C /* infoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
+		789BCB841F780ED500FAC00C /* JSONPurser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONPurser.swift; sourceTree = "<group>"; };
+		789BCB861F78105A00FAC00C /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				789BCB7A1F77FDBF00FAC00C /* Info.plist */,
 				789BCB801F78053F00FAC00C /* recipeViewController.swift */,
 				789BCB821F78055A00FAC00C /* infoViewController.swift */,
+				789BCB841F780ED500FAC00C /* JSONPurser.swift */,
+				789BCB861F78105A00FAC00C /* sample.json */,
 			);
 			path = babakitchen;
 			sourceTree = "<group>";
@@ -131,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				789BCB791F77FDBF00FAC00C /* LaunchScreen.storyboard in Resources */,
+				789BCB871F78105A00FAC00C /* sample.json in Resources */,
 				789BCB761F77FDBF00FAC00C /* Assets.xcassets in Resources */,
 				789BCB741F77FDBF00FAC00C /* Main.storyboard in Resources */,
 			);
@@ -144,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				789BCB811F78053F00FAC00C /* recipeViewController.swift in Sources */,
+				789BCB851F780ED500FAC00C /* JSONPurser.swift in Sources */,
 				789BCB711F77FDBF00FAC00C /* MainViewController.swift in Sources */,
 				789BCB831F78055A00FAC00C /* infoViewController.swift in Sources */,
 				789BCB6F1F77FDBF00FAC00C /* AppDelegate.swift in Sources */,
