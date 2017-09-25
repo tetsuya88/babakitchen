@@ -89,6 +89,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="mIA-kI-llA" id="nMP-4e-LtL"/>
                         <segue destination="fJO-gj-sUY" kind="show" identifier="showRecipeView" id="erh-qN-rih"/>
                     </connections>
                 </viewController>
@@ -107,7 +108,18 @@
                     <view key="view" contentMode="scaleToFill" id="dJU-IT-e0O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recipe" translatesAutoresizingMaskIntoConstraints="NO" id="d2a-5G-j75">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lp1-Og-EvO" firstAttribute="top" secondItem="d2a-5G-j75" secondAttribute="bottom" id="Pwe-kF-Z9B"/>
+                            <constraint firstItem="d2a-5G-j75" firstAttribute="leading" secondItem="dJU-IT-e0O" secondAttribute="leading" id="g1z-7B-9Fb"/>
+                            <constraint firstItem="d2a-5G-j75" firstAttribute="top" secondItem="3eX-Gn-QLW" secondAttribute="bottom" id="loc-du-9TO"/>
+                            <constraint firstAttribute="trailing" secondItem="d2a-5G-j75" secondAttribute="trailing" id="rew-AY-R2s"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwu-i0-Ucd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -155,4 +167,7 @@
             <point key="canvasLocation" x="162" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="recipe" width="750" height="1238"/>
+    </resources>
 </document>

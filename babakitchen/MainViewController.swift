@@ -23,15 +23,20 @@ class MainViewController: UIViewController,UICollectionViewDelegate, UICollectio
     ]
     
     let sample:[String] = ["斉藤さん","吉田さん","加藤さん","後藤さん","三井さん","多賀禰さん","友野さん","佐々木さん","持田さん"]
-    
+    let favoriteSample:[Int] = [0,3,4,6]
     /////////////
     
+    @IBOutlet weak var collectionView: UICollectionView!
     private var getData:[String]?
     
     private var JSONdata:[String : Any] = [:]
     
     private var JSONpurser = JSONPurser()
     private var selectID = 0
+    
+    private var favoriteID:[Int]?
+    private var favoriteState:Bool = false
+    private var originData:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +45,9 @@ class MainViewController: UIViewController,UICollectionViewDelegate, UICollectio
         JSONpurser.JSONReader()
         JSONdata = data
         getData = sample
-        print(getData!)
+        favoriteID = favoriteSample
+        originData = getData!
+        
         
     }
     
@@ -86,6 +93,25 @@ class MainViewController: UIViewController,UICollectionViewDelegate, UICollectio
     }
     
     @IBAction func favoriteButtonAction(_ sender: Any) {
+        
+        if favoriteState == false{
+            
+            let favoriteAmount = (favoriteID?.count)!
+            print(favoriteAmount)
+            getData = []
+            
+            for i in 1...favoriteAmount {
+                let favoriteKey = (favoriteID?[i-1])!
+                let recipeName = originData[favoriteKey]
+                getData?.append(recipeName)
+            }
+            collectionView.reloadData()
+            favoriteState = true
+        }else{
+            getData = originData
+            collectionView.reloadData()
+        }
+        
     }
 }
 
