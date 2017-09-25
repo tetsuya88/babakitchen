@@ -6,5 +6,5 @@ target 'babakitchen' do
   use_frameworks!
 
   # Pods for babakitchen
-  pod 'SwiftyJson'
+  pod 'SwiftyJSON'
 end
