@@ -11,11 +11,16 @@ import UIKit
 class recipeViewController: UIViewController {
     
     var selectedID:Int = 0
-    
+    var JSONpurser = JSONPurser()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print(selectedID)
+        
+        let selectRecipe =  JSONpurser.JSONArray(id: selectedID)
+        print(selectRecipe)
+        
+        
         // Do any additional setup after loading the view.
     }
 

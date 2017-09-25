@@ -30,7 +30,7 @@ class JSONPurser{
         }
     }
     
-    func JSONArray() -> Array<Any> {
+    func JSONArray(id:Int) -> Array<Any> {
         
         let jsonPath = Bundle.main.path(forResource: "sample", ofType: "json")
         
@@ -39,7 +39,7 @@ class JSONPurser{
             let json = JSON(data: jsonData!)
 
             //let recipe = jsonData?[0].double
-            let recipe: Array = json["data"][2]["recipe"].array!
+            let recipe: Array = json["data"][id]["recipe"].array!
             
             print(recipe)
             return recipe
