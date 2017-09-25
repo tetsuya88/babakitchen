@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
        JSONdata = data
-       JSONpurser.JSON()
+       JSONpurser.JSONReader()
         
     }
 
