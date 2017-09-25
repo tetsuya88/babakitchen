@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+class MainViewController: UIViewController,UICollectionViewDelegate {
     
     ///////仮データ///////
     let data:[String : Any] = [
@@ -30,59 +30,26 @@ class MainViewController: UIViewController,UICollectionViewDelegate, UICollectio
     
     private var JSONdata:[String : Any] = [:]
     
-    private var JSONpurser = JSONPurser()
-    private var selectID = 0
+    var JSONpurser = JSONPurser()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+
+        JSONpurser.JSONReader()
         JSONdata = data
+        
         getData = sample
-        print(getData!)
+
         
     }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        let cellCount = (getData?.count)!
-        print(cellCount)
-        return cellCount
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        
-        let faceCell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "faceCell", for: indexPath)
-        
-        let faceCellLabel = faceCell.contentView.viewWithTag(1) as! UILabel
-        
-        faceCellLabel.text = getData?[(indexPath as NSIndexPath).row]
-        
-        return faceCell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectID = indexPath.row
-        performSegue(withIdentifier: "showRecipeView", sender: nil)
-    }
-    
-    
-    //レイアウト調整
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellSize:CGFloat = self.view.frame.size.width/2-2
-        return CGSize(width: cellSize, height: cellSize)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showRecipeView"{
-            let recipeView:recipeViewController = segue.destination as! recipeViewController
-            recipeView.selectedID = selectID
-        }
-    }
+
 
 }
 

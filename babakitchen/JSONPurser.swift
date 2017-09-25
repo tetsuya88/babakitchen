@@ -10,7 +10,33 @@ import Foundation
 
 class JSONPurser{
 
-    func JSON(){
-        print("aaa")
-    }
+    func JSONReader(){
+    
+        
+        //jsonファイルの読みこみ
+        var jsonPath = Bundle.main.path(forResource: "sample", ofType: "json")
+        //jsonPath = jsonPath?.data(using: String.Encoding.utf8)!
+        
+        
+        
+            do{
+                let jsonData = try? Data(contentsOf: URL(fileURLWithPath: jsonPath!))
+                
+                jsonData
+                
+                
+                let jsonArray = (try! JSONSerialization.jsonObject(with: jsonData!, options: [])) as! NSDictionary
+                
+                
+            
+            print(jsonArray)
+            
+            
+        } catch{
+            print("error")
+        }
+        
+        
+        
+           }
 }
