@@ -16,6 +16,7 @@
 		789BCB831F78055A00FAC00C /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BCB821F78055A00FAC00C /* infoViewController.swift */; };
 		789BCB851F780ED500FAC00C /* JSONPurser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BCB841F780ED500FAC00C /* JSONPurser.swift */; };
 		789BCB871F78105A00FAC00C /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 789BCB861F78105A00FAC00C /* sample.json */; };
+		789BCB891F78B42300FAC00C /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BCB881F78B42300FAC00C /* NavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		789BCB821F78055A00FAC00C /* infoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
 		789BCB841F780ED500FAC00C /* JSONPurser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONPurser.swift; sourceTree = "<group>"; };
 		789BCB861F78105A00FAC00C /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
+		789BCB881F78B42300FAC00C /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				789BCB821F78055A00FAC00C /* infoViewController.swift */,
 				789BCB841F780ED500FAC00C /* JSONPurser.swift */,
 				789BCB861F78105A00FAC00C /* sample.json */,
+				789BCB881F78B42300FAC00C /* NavigationViewController.swift */,
 			);
 			path = babakitchen;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				789BCB891F78B42300FAC00C /* NavigationViewController.swift in Sources */,
 				789BCB811F78053F00FAC00C /* recipeViewController.swift in Sources */,
 				789BCB851F780ED500FAC00C /* JSONPurser.swift in Sources */,
 				789BCB711F77FDBF00FAC00C /* MainViewController.swift in Sources */,
