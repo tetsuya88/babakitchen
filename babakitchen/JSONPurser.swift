@@ -7,36 +7,26 @@
 //
 
 import Foundation
+import SwiftyJSON
+
 
 class JSONPurser{
-
-    func JSONReader(){
     
-        
+    func JSONReader() -> String {
         //jsonファイルの読みこみ
-        var jsonPath = Bundle.main.path(forResource: "sample", ofType: "json")
-        //jsonPath = jsonPath?.data(using: String.Encoding.utf8)!
+        let jsonPath = Bundle.main.path(forResource: "sample", ofType: "json")
         
-        
-        
-            do{
-                let jsonData = try? Data(contentsOf: URL(fileURLWithPath: jsonPath!))
-                
-                jsonData
-                
-                
-                let jsonArray = (try! JSONSerialization.jsonObject(with: jsonData!, options: [])) as! NSDictionary
-                
-                
+        do {
+            let jsonData = try? Data(contentsOf: URL(fileURLWithPath: jsonPath!))
+            let json = JSON(data: jsonData!)
+            let faceimageURL: String = json["data"][1]["faceimageURL"].string!
             
-            print(jsonArray)
+            //print(name)
+            return faceimageURL
             
-            
-        } catch{
+        } catch {
             print("error")
+            return ""
         }
-        
-        
-        
-           }
+    }
 }
