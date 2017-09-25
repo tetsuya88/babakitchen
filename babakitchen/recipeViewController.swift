@@ -9,10 +9,13 @@
 import UIKit
 
 class recipeViewController: UIViewController {
+    
+    var selectedID:Int = 0
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(selectedID)
         // Do any additional setup after loading the view.
     }
 
