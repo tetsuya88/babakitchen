@@ -18,7 +18,7 @@ class NavigationViewController: UINavigationController,UINavigationControllerDel
     override func viewWillAppear(_ animated: Bool) {
         // 戻るボタンの色を変更
         self.navigationBar.tintColor = UIColor.white
-        self.navigationBar.topItem!.titleView = UIImageView(image: UIImage(named: "top.png"))
+        //self.navigationBar.topItem!.titleView = UIImageView(image: UIImage(named: "top.png"))
         
     }
     

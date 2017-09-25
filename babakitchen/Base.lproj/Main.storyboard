@@ -74,10 +74,22 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mIA-kI-llA" secondAttribute="bottom" id="tu9-w9-B5e"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mza-7L-uGG"/>
+                    <navigationItem key="navigationItem" id="mza-7L-uGG">
+                        <barButtonItem key="leftBarButtonItem" title="使い方" style="plain" id="EAh-s3-wZM">
+                            <color key="tintColor" red="0.32156862745098036" green="0.14117647058823529" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="OmF-z2-OvN" kind="showDetail" id="TGS-Ym-kcx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="jqk-Gm-N4T">
+                            <color key="tintColor" red="0.32156862745098036" green="0.14117647058823529" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="favoriteButtonAction:" destination="BYZ-38-t0r" id="x6z-5F-DtB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="fJO-gj-sUY" kind="show" identifier="showRecipeView" id="erh-qN-rih"/>
-                        <segue destination="OmF-z2-OvN" kind="show" identifier="showInfoView" id="L96-bK-SGX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

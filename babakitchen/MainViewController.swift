@@ -22,7 +22,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate, UICollectio
         ]
     ]
     
-    let sample:[String] = ["斉藤さん","吉田さん","加藤さん","後藤さん","三井さん","多賀禰さん"]
+    let sample:[String] = ["斉藤さん","吉田さん","加藤さん","後藤さん","三井さん","多賀禰さん","友野さん","佐々木さん","持田さん"]
     
     /////////////
     
@@ -85,5 +85,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate, UICollectio
         }
     }
     
+    @IBAction func favoriteButtonAction(_ sender: Any) {
+    }
 }
 
