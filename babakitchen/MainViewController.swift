@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController,UICollectionViewDelegate {
     
     ///////仮データ///////
     let data:[String : Any] = [
@@ -22,9 +22,13 @@ class MainViewController: UIViewController {
             ]
         ]
     
+    let sample:[String] = ["斉藤さん","吉田さん","加藤さん","後藤さん","三井さん","多賀禰さん"]
+    
     /////////////
     
-    var JSONdata:[String : Any] = [:]
+    private var getData:[String]?
+    
+    private var JSONdata:[String : Any] = [:]
     
     var JSONpurser = JSONPurser()
 
@@ -32,8 +36,9 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-       JSONdata = data
-       JSONpurser.JSON()
+        JSONdata = data
+        
+        getData = sample
         
     }
 
