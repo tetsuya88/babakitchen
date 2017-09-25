@@ -12,14 +12,14 @@ import SwiftyJSON
 
 class JSONPurser{
     
-    func JSONReader() -> String {
+    func JSONReader(id:Int) -> String {
         //jsonファイルの読みこみ
         let jsonPath = Bundle.main.path(forResource: "sample", ofType: "json")
         
         do {
             let jsonData = try? Data(contentsOf: URL(fileURLWithPath: jsonPath!))
             let json = JSON(data: jsonData!)
-            let faceimageURL: String = json["data"][1]["faceimageURL"].string!
+            let faceimageURL: String = json["data"][id]["faceimageURL"].string!
             
             //print(name)
             return faceimageURL

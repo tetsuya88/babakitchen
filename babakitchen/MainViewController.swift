@@ -27,7 +27,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate, UICollectio
     /////////////
     
     @IBOutlet weak var collectionView: UICollectionView!
-    private var getData:[String]?
+    private var getData:[String] = []
     
     private var JSONdata:[String : Any] = [:]
     
@@ -42,13 +42,14 @@ class MainViewController: UIViewController,UICollectionViewDelegate, UICollectio
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var faceimageURL = JSONpurser.JSONReader()
-        JSONdata = data
-        getData = sample
+        for i in 0...6{
+            var faceimageURL = JSONpurser.JSONReader(id:i)
+            print(faceimageURL)
+            getData.append(faceimageURL)
+        }
+        print(getData)
         favoriteID = favoriteSample
-        originData = getData!
-        print(faceimageURL)
-        
+        originData = getData
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -57,7 +58,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        let cellCount = (getData?.count)!
+        let cellCount = getData.count
         print(cellCount)
         return cellCount
     }
@@ -66,9 +67,11 @@ class MainViewController: UIViewController,UICollectionViewDelegate, UICollectio
         
         let faceCell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "faceCell", for: indexPath)
         
-        let faceCellLabel = faceCell.contentView.viewWithTag(1) as! UILabel
+        let faceCellView = faceCell.contentView.viewWithTag(1) as! UIImageView
         
-        faceCellLabel.text = getData?[(indexPath as NSIndexPath).row]
+        let cellImage = UIImage(named: "\(getData[(indexPath as NSIndexPath).row]).png")
+        
+        faceCellView.image = cellImage
         
         return faceCell
     }
@@ -103,13 +106,16 @@ class MainViewController: UIViewController,UICollectionViewDelegate, UICollectio
             for i in 1...favoriteAmount {
                 let favoriteKey = (favoriteID?[i-1])!
                 let recipeName = originData[favoriteKey]
-                getData?.append(recipeName)
+                getData.append(recipeName)
             }
             collectionView.reloadData()
+            self.view.backgroundColor = UIColor(red: 255, green: 0, blue: 0, alpha: 100)
             favoriteState = true
         }else{
             getData = originData
             collectionView.reloadData()
+            self.view.backgroundColor = UIColor(red: 255, green: 253, blue: 242, alpha: 100)
+            favoriteState = false
         }
         
     }

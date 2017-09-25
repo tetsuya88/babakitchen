@@ -38,25 +38,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dVg-HO-9md">
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dVg-HO-9md">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ef-IX-0a1">
-                                                    <rect key="frame" x="69" y="80" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="0.40000000000000002" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="dVg-HO-9md" firstAttribute="leading" secondItem="fBp-Uu-DvZ" secondAttribute="leading" id="PoK-AL-w6t"/>
-                                            <constraint firstItem="6Ef-IX-0a1" firstAttribute="centerX" secondItem="fBp-Uu-DvZ" secondAttribute="centerX" id="auK-Q9-rZg"/>
                                             <constraint firstItem="dVg-HO-9md" firstAttribute="top" secondItem="fBp-Uu-DvZ" secondAttribute="top" id="gCp-EM-dK4"/>
                                             <constraint firstAttribute="trailing" secondItem="dVg-HO-9md" secondAttribute="trailing" id="gRa-AG-7qx"/>
                                             <constraint firstAttribute="bottom" secondItem="dVg-HO-9md" secondAttribute="bottom" id="hPS-nO-mBz"/>
-                                            <constraint firstItem="6Ef-IX-0a1" firstAttribute="centerY" secondItem="fBp-Uu-DvZ" secondAttribute="centerY" id="hrT-Aj-JE9"/>
                                         </constraints>
                                     </collectionViewCell>
                                 </cells>
