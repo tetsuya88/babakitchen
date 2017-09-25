@@ -37,6 +37,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate, UICollectio
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        JSONpurser.JSONReader()
         JSONdata = data
         getData = sample
         print(getData!)
