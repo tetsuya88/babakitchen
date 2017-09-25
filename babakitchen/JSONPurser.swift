@@ -29,4 +29,26 @@ class JSONPurser{
             return ""
         }
     }
+    
+    func JSONArray() -> Array<Any> {
+        
+        let jsonPath = Bundle.main.path(forResource: "sample", ofType: "json")
+        
+        do {
+            let jsonData = try? Data(contentsOf: URL(fileURLWithPath: jsonPath!))
+            let json = JSON(data: jsonData!)
+
+            //let recipe = jsonData?[0].double
+            let recipe: Array = json["data"][2]["recipe"].array!
+            
+            print(recipe)
+            return recipe
+            
+        } catch {
+            print("error")
+            //return ""
+        }
+
+        
+    }
 }
